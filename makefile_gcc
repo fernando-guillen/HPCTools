@@ -1,0 +1,24 @@
+all: dgesv_0 dgesv_1 dgesv_2 dgesv_3 dgesv_fast dgesv_ipo
+
+CC = gcc
+
+dgesv_0: dgesv.c
+	${CC} -O0 -o dgesvO0 -fopenmp dgesv.c
+
+dgesv_1: dgesv.c
+	${CC} -O1 -o dgesvO1 -fopenmp dgesv.c
+
+dgesv_2: dgesv.c
+	${CC} -O2 -march=native -o dgesvO2 -fopenmp dgesv.c
+
+dgesv_3: dgesv.c
+	${CC} -O3 -march=native -o dgesvO3 -fopenmp dgesv.c
+
+dgesv_fast: dgesv.c
+	${CC} -Ofast -march=native -o dgesvOfast -fopenmp dgesv.c
+
+dgesv_ipo: dgesv.c
+	${CC} -Ofast -march=native -fipa-pta -o dgesvOipo -fopenmp dgesv.c
+
+clean:
+	 rm -f dgesvO0 dgesvO1 dgesvO2 dgesvO3 dgesvOfast dgesvOipo
