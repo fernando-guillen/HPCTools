@@ -1,0 +1,1051 @@
+o2_dgesv.c:5:7: note: ===== analyze_loop_nest =====
+o2_dgesv.c:5:7: note: === vect_analyze_loop_form ===
+o2_dgesv.c:5:7: note: not vectorized: multiple nested loops.
+o2_dgesv.c:5:7: note: bad loop form.
+
+Analyzing loop at o2_dgesv.c:75
+o2_dgesv.c:75:7: note: ===== analyze_loop_nest =====
+o2_dgesv.c:75:7: note: === vect_analyze_loop_form ===
+o2_dgesv.c:75:7: note: not vectorized: control flow in loop.
+o2_dgesv.c:75:7: note: bad loop form.
+
+Analyzing loop at o2_dgesv.c:79
+o2_dgesv.c:79:11: note: ===== analyze_loop_nest =====
+o2_dgesv.c:79:11: note: === vect_analyze_loop_form ===
+o2_dgesv.c:79:11: note: === get_loop_niters ===
+o2_dgesv.c:79:11: note: Symbolic number of iterations is (unsigned int) _115 - (unsigned int) i_150
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:11: note: got vectype for stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+vector(4) double
+o2_dgesv.c:79:11: note: got vectype for stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+vector(4) double
+o2_dgesv.c:79:11: note: === vect_analyze_scalar_cycles ===
+o2_dgesv.c:79:11: note: Analyze phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: Access function of PHI: {i_150, +, 1}_6
+o2_dgesv.c:79:11: note: step: 1,  init: i_150
+o2_dgesv.c:79:11: note: Detected induction.
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: Access function of PHI: {0.0, +, _60}_6
+o2_dgesv.c:79:11: note: step: _60,  init: 0.0
+o2_dgesv.c:79:11: note: step unknown.
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: detected reduction: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: Detected reduction.
+o2_dgesv.c:79:11: note: === vect_pattern_recog ===
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:79:11: note: === vect_mark_stmts_to_be_vectorized ===
+o2_dgesv.c:79:11: note: init: phi relevant? j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: init: phi relevant? sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: init: stmt relevant? _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: init: stmt relevant? _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: init: stmt relevant? _60 = _58 * _59;
+o2_dgesv.c:79:11: note: init: stmt relevant? sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: vec_stmt_relevant_p: used out of loop.
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vec_stmt_relevant_p: stmt live but not relevant.
+o2_dgesv.c:79:11: note: mark relevant 1, live 1: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: init: stmt relevant? j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: init: stmt relevant? if (j_108 < _116)
+o2_dgesv.c:79:11: note: worklist: examine stmt: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_154
+o2_dgesv.c:79:11: note: def_stmt: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: type of def: reduction
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: worklist: examine stmt: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand 0.0
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_107
+o2_dgesv.c:79:11: note: def_stmt: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: type of def: reduction
+o2_dgesv.c:79:11: note: reduc-stmt defining reduc-phi in the same nest.
+o2_dgesv.c:79:11: note: worklist: examine stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _59
+o2_dgesv.c:79:11: note: def_stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: worklist: examine stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: worklist: examine stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_dependences ===
+o2_dgesv.c:79:11: note: === vect_determine_vectorization_factor ===
+o2_dgesv.c:79:11: note: ==> examining phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: ==> examining phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: nunits = 4
+o2_dgesv.c:79:11: note: ==> examining statement: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: nunits = 4
+o2_dgesv.c:79:11: note: ==> examining statement: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: nunits = 4
+o2_dgesv.c:79:11: note: ==> examining statement: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: nunits = 4
+o2_dgesv.c:79:11: note: ==> examining statement: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(4) double
+o2_dgesv.c:79:11: note: nunits = 4
+o2_dgesv.c:79:11: note: ==> examining statement: j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: skip.
+o2_dgesv.c:79:11: note: ==> examining statement: if (j_108 < _116)
+o2_dgesv.c:79:11: note: skip.
+o2_dgesv.c:79:11: note: vectorization factor = 4
+o2_dgesv.c:79:11: note: === vect_analyze_slp ===
+o2_dgesv.c:79:11: note: === vect_make_slp_decision ===
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs_alignment ===
+o2_dgesv.c:79:11: note: recording new base alignment for matriz_aumentada.1_84
+o2_dgesv.c:79:11: note:   alignment:    8
+o2_dgesv.c:79:11: note:   misalignment: 0
+o2_dgesv.c:79:11: note:   based on:     _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: recording new base alignment for x.4_87
+o2_dgesv.c:79:11: note:   alignment:    8
+o2_dgesv.c:79:11: note:   misalignment: 0
+o2_dgesv.c:79:11: note:   based on:     _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:79:11: note: Unknown alignment for access: *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147]
+o2_dgesv.c:79:11: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:79:11: note: Unknown alignment for access: *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145]
+o2_dgesv.c:79:11: note: === vect_prune_runtime_alias_test_list ===
+o2_dgesv.c:79:11: note: === vect_enhance_data_refs_alignment ===
+o2_dgesv.c:79:11: note: Unknown misalignment, naturally aligned
+o2_dgesv.c:79:11: note: vect_can_advance_ivs_p:
+o2_dgesv.c:79:11: note: Analyze phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: reduc or virtual phi. skip.
+o2_dgesv.c:79:11: note: vect_model_load_cost: aligned.
+o2_dgesv.c:79:11: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:79:11: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:79:11: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:79:11: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:79:11: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:79:11: note: Vectorizing an unaligned access.
+o2_dgesv.c:79:11: note: === vect_analyze_loop_operations ===
+o2_dgesv.c:79:11: note: examining phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: examining phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: ==> examining statement: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: num. args = 4 (not unary/binary/ternary op).
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147]
+o2_dgesv.c:79:11: note: not ssa-name.
+o2_dgesv.c:79:11: note: use not simple.
+o2_dgesv.c:79:11: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:79:11: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+o2_dgesv.c:79:11: note: ==> examining statement: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: num. args = 4 (not unary/binary/ternary op).
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145]
+o2_dgesv.c:79:11: note: not ssa-name.
+o2_dgesv.c:79:11: note: use not simple.
+o2_dgesv.c:79:11: note: cannot truncate variable step.
+o2_dgesv.c:79:11: note: can't use a fully-masked loop because an access isn't contiguous.
+o2_dgesv.c:79:11: note: vect_model_load_cost: inside_cost = 160, prologue_cost = 0 .
+o2_dgesv.c:79:11: note: ==> examining statement: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _59
+o2_dgesv.c:79:11: note: def_stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: === vectorizable_operation ===
+o2_dgesv.c:79:11: note: vect_model_simple_cost: inside_cost = 20, prologue_cost = 0 .
+o2_dgesv.c:79:11: note: ==> examining statement: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_154
+o2_dgesv.c:79:11: note: def_stmt: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: type of def: reduction
+vect_model_reduction_cost: inside_cost = 12, prologue_cost = 4, epilogue_cost = 16 .
+o2_dgesv.c:79:11: note: ==> examining statement: j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: irrelevant.
+o2_dgesv.c:79:11: note: ==> examining statement: if (j_108 < _116)
+o2_dgesv.c:79:11: note: irrelevant.
+o2_dgesv.c:79:11: note: not using a fully-masked loop.
+o2_dgesv.c:79:11: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:79:11: note: Cost model analysis: 
+  Vector inside of loop cost: 204
+  Vector prologue cost: 28
+  Vector epilogue cost: 112
+  Scalar iteration cost: 48
+  Scalar outside cost: 24
+  Vector outside cost: 140
+  prologue iterations: 0
+  epilogue iterations: 2
+o2_dgesv.c:79:11: note: cost model: the vector iteration cost = 204 divided by the scalar iteration cost = 48 is greater or equal to the vectorization factor = 4.
+o2_dgesv.c:79:11: note: not vectorized: vectorization not profitable.
+o2_dgesv.c:79:11: note: not vectorized: vector version will never be profitable.
+o2_dgesv.c:79:11: note: ***** Re-trying analysis with vector size 16
+o2_dgesv.c:79:11: note: === vect_analyze_loop_form ===
+o2_dgesv.c:79:11: note: === get_loop_niters ===
+o2_dgesv.c:79:11: note: Symbolic number of iterations is (unsigned int) _115 - (unsigned int) i_150
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:11: note: got vectype for stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+vector(2) double
+o2_dgesv.c:79:11: note: got vectype for stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+vector(2) double
+o2_dgesv.c:79:11: note: === vect_analyze_scalar_cycles ===
+o2_dgesv.c:79:11: note: Analyze phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: Access function of PHI: {i_150, +, 1}_6
+o2_dgesv.c:79:11: note: step: 1,  init: i_150
+o2_dgesv.c:79:11: note: Detected induction.
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: Access function of PHI: {0.0, +, _60}_6
+o2_dgesv.c:79:11: note: step: _60,  init: 0.0
+o2_dgesv.c:79:11: note: step unknown.
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: detected reduction: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: Detected reduction.
+o2_dgesv.c:79:11: note: === vect_pattern_recog ===
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:79:11: note: === vect_mark_stmts_to_be_vectorized ===
+o2_dgesv.c:79:11: note: init: phi relevant? j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: init: phi relevant? sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: init: stmt relevant? _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: init: stmt relevant? _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: init: stmt relevant? _60 = _58 * _59;
+o2_dgesv.c:79:11: note: init: stmt relevant? sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: vec_stmt_relevant_p: used out of loop.
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vec_stmt_relevant_p: stmt live but not relevant.
+o2_dgesv.c:79:11: note: mark relevant 1, live 1: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: init: stmt relevant? j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: init: stmt relevant? if (j_108 < _116)
+o2_dgesv.c:79:11: note: worklist: examine stmt: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_154
+o2_dgesv.c:79:11: note: def_stmt: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: type of def: reduction
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: worklist: examine stmt: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand 0.0
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_107
+o2_dgesv.c:79:11: note: def_stmt: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: type of def: reduction
+o2_dgesv.c:79:11: note: reduc-stmt defining reduc-phi in the same nest.
+o2_dgesv.c:79:11: note: worklist: examine stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _59
+o2_dgesv.c:79:11: note: def_stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: mark relevant 1, live 0: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: worklist: examine stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: worklist: examine stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_dependences ===
+o2_dgesv.c:79:11: note: === vect_determine_vectorization_factor ===
+o2_dgesv.c:79:11: note: ==> examining phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: ==> examining phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: nunits = 2
+o2_dgesv.c:79:11: note: ==> examining statement: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: nunits = 2
+o2_dgesv.c:79:11: note: ==> examining statement: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: nunits = 2
+o2_dgesv.c:79:11: note: ==> examining statement: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: nunits = 2
+o2_dgesv.c:79:11: note: ==> examining statement: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: get vectype for scalar type:  double
+o2_dgesv.c:79:11: note: vectype: vector(2) double
+o2_dgesv.c:79:11: note: nunits = 2
+o2_dgesv.c:79:11: note: ==> examining statement: j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: skip.
+o2_dgesv.c:79:11: note: ==> examining statement: if (j_108 < _116)
+o2_dgesv.c:79:11: note: skip.
+o2_dgesv.c:79:11: note: vectorization factor = 2
+o2_dgesv.c:79:11: note: === vect_analyze_slp ===
+o2_dgesv.c:79:11: note: === vect_make_slp_decision ===
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs_alignment ===
+o2_dgesv.c:79:11: note: recording new base alignment for matriz_aumentada.1_84
+o2_dgesv.c:79:11: note:   alignment:    8
+o2_dgesv.c:79:11: note:   misalignment: 0
+o2_dgesv.c:79:11: note:   based on:     _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: recording new base alignment for x.4_87
+o2_dgesv.c:79:11: note:   alignment:    8
+o2_dgesv.c:79:11: note:   misalignment: 0
+o2_dgesv.c:79:11: note:   based on:     _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:79:11: note: Unknown alignment for access: *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147]
+o2_dgesv.c:79:11: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:79:11: note: Unknown alignment for access: *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145]
+o2_dgesv.c:79:11: note: === vect_prune_runtime_alias_test_list ===
+o2_dgesv.c:79:11: note: === vect_enhance_data_refs_alignment ===
+o2_dgesv.c:79:11: note: Unknown misalignment, naturally aligned
+o2_dgesv.c:79:11: note: vect_can_advance_ivs_p:
+o2_dgesv.c:79:11: note: Analyze phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: reduc or virtual phi. skip.
+o2_dgesv.c:79:11: note: vect_model_load_cost: aligned.
+o2_dgesv.c:79:11: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:79:11: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:79:11: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:79:11: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:79:11: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:79:11: note: Vectorizing an unaligned access.
+o2_dgesv.c:79:11: note: === vect_analyze_loop_operations ===
+o2_dgesv.c:79:11: note: examining phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: examining phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: ==> examining statement: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: num. args = 4 (not unary/binary/ternary op).
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147]
+o2_dgesv.c:79:11: note: not ssa-name.
+o2_dgesv.c:79:11: note: use not simple.
+o2_dgesv.c:79:11: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:79:11: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+o2_dgesv.c:79:11: note: ==> examining statement: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: num. args = 4 (not unary/binary/ternary op).
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145]
+o2_dgesv.c:79:11: note: not ssa-name.
+o2_dgesv.c:79:11: note: use not simple.
+o2_dgesv.c:79:11: note: cannot truncate variable step.
+o2_dgesv.c:79:11: note: can't use a fully-masked loop because an access isn't contiguous.
+o2_dgesv.c:79:11: note: vect_model_load_cost: inside_cost = 40, prologue_cost = 0 .
+o2_dgesv.c:79:11: note: ==> examining statement: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _59
+o2_dgesv.c:79:11: note: def_stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: === vectorizable_operation ===
+o2_dgesv.c:79:11: note: vect_model_simple_cost: inside_cost = 20, prologue_cost = 0 .
+o2_dgesv.c:79:11: note: ==> examining statement: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_154
+o2_dgesv.c:79:11: note: def_stmt: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: type of def: reduction
+vect_model_reduction_cost: inside_cost = 12, prologue_cost = 4, epilogue_cost = 16 .
+o2_dgesv.c:79:11: note: ==> examining statement: j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: irrelevant.
+o2_dgesv.c:79:11: note: ==> examining statement: if (j_108 < _116)
+o2_dgesv.c:79:11: note: irrelevant.
+o2_dgesv.c:79:11: note: not using a fully-masked loop.
+o2_dgesv.c:79:11: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:79:11: note: Cost model analysis: 
+  Vector inside of loop cost: 84
+  Vector prologue cost: 28
+  Vector epilogue cost: 64
+  Scalar iteration cost: 48
+  Scalar outside cost: 24
+  Vector outside cost: 92
+  prologue iterations: 0
+  epilogue iterations: 1
+  Calculated minimum iters for profitability: 5
+o2_dgesv.c:79:11: note:   Runtime profitability threshold = 5
+o2_dgesv.c:79:11: note:   Static estimate profitability threshold = 12
+o2_dgesv.c:79:11: note: epilog loop required
+o2_dgesv.c:79:11: note: vect_can_advance_ivs_p:
+o2_dgesv.c:79:11: note: Analyze phi: j_147 = PHI <i_150(24), j_108(29)>
+o2_dgesv.c:79:11: note: Analyze phi: sum_154 = PHI <0.0(24), sum_107(29)>
+o2_dgesv.c:79:11: note: reduc or virtual phi. skip.
+o2_dgesv.c:79:11: note: loop vectorized
+o2_dgesv.c:79:11: note: === vec_transform_loop ===
+o2_dgesv.c:79:11: note: Profitability threshold is 5 loop iterations.
+o2_dgesv.c:79:11: note: vect_update_ivs_after_vectorizer: phi: j_147 = PHI <j_108(29), i_150(47)>
+o2_dgesv.c:79:11: note: vect_update_ivs_after_vectorizer: phi: sum_154 = PHI <sum_107(29), 0.0(47)>
+o2_dgesv.c:79:11: note: reduc or virtual phi. skip.
+o2_dgesv.c:79:11: note: ------>vectorizing phi: j_147 = PHI <j_108(29), i_150(54)>
+o2_dgesv.c:79:11: note: ------>vectorizing phi: sum_154 = PHI <sum_107(29), 0.0(54)>
+o2_dgesv.c:79:11: note: transform phi.
+o2_dgesv.c:79:11: note: ------>vectorizing phi: vect_sum_107.10_166 = PHI <(29), (54)>
+o2_dgesv.c:79:11: note: ------>vectorizing statement: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: transform statement.
+o2_dgesv.c:79:11: note: transform load. ncopies = 1
+o2_dgesv.c:79:11: note: create vector_type-pointer variable to type: vector(2) double  vectorizing an array ref: *matriz_aumentada.1_84
+o2_dgesv.c:79:11: note: created vectp_matriz_aumentada.12_165
+o2_dgesv.c:79:11: note: add new stmt: vect__58.13_142 = MEM[(double *)vectp_matriz_aumentada.11_156];
+o2_dgesv.c:79:11: note: ------>vectorizing statement: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: transform statement.
+o2_dgesv.c:79:11: note: cannot truncate variable step.
+o2_dgesv.c:79:11: note: transform load. ncopies = 1
+o2_dgesv.c:79:11: note: add new stmt: _125 = MEM[(double *)ivtmp_130];
+o2_dgesv.c:79:11: note: add new stmt: ivtmp_124 = ivtmp_130 + _126;
+o2_dgesv.c:79:11: note: add new stmt: _122 = MEM[(double *)ivtmp_124];
+o2_dgesv.c:79:11: note: add new stmt: ivtmp_120 = ivtmp_124 + _126;
+o2_dgesv.c:79:11: note: add new stmt: vect_cst__119 = {_125, _122};
+o2_dgesv.c:79:11: note: created new init_stmt: vect_cst__119 = {_125, _122};
+o2_dgesv.c:79:11: note: ------>vectorizing statement: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: transform statement.
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _59
+o2_dgesv.c:79:11: note: def_stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: transform binary/unary operation.
+o2_dgesv.c:79:11: note: vect_get_vec_def_for_operand: _58
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _58
+o2_dgesv.c:79:11: note: def_stmt: _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note:   def_stmt =  _58 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_147];
+o2_dgesv.c:79:11: note: vect_get_vec_def_for_operand: _59
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _59
+o2_dgesv.c:79:11: note: def_stmt: _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note:   def_stmt =  _59 = *x.4_87[j_147]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: add new stmt: vect__60.14_118 = vect__58.13_142 * vect_cst__119;
+o2_dgesv.c:79:11: note: ------>vectorizing statement: sum_107 = _60 + sum_154;
+o2_dgesv.c:79:11: note: transform statement.
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_154
+o2_dgesv.c:79:11: note: def_stmt: sum_154 = PHI <sum_107(29), 0.0(54)>
+o2_dgesv.c:79:11: note: type of def: reduction
+o2_dgesv.c:79:11: note: transform reduction.
+o2_dgesv.c:79:11: note: vect_get_vec_def_for_operand: _60
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand _60
+o2_dgesv.c:79:11: note: def_stmt: _60 = _58 * _59;
+o2_dgesv.c:79:11: note: type of def: internal
+o2_dgesv.c:79:11: note:   def_stmt =  _60 = _58 * _59;
+o2_dgesv.c:79:11: note: vect_get_vec_def_for_operand: sum_154
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand sum_154
+o2_dgesv.c:79:11: note: def_stmt: sum_154 = PHI <sum_107(29), 0.0(54)>
+o2_dgesv.c:79:11: note: type of def: reduction
+o2_dgesv.c:79:11: note:   def_stmt =  sum_154 = PHI <sum_107(29), 0.0(54)>
+o2_dgesv.c:79:11: note: add new stmt: vect_sum_107.15_71 = vect__60.14_118 + vect_sum_107.10_166;
+o2_dgesv.c:79:11: note: vect_is_simple_use: operand 0.0
+o2_dgesv.c:79:11: note: transform reduction: created def-use cycle: vect_sum_107.10_166 = PHI <vect_sum_107.15_71(29), { 0.0, 0.0 }(54)>
+vect_sum_107.15_71 = vect__60.14_118 + vect_sum_107.10_166;
+o2_dgesv.c:79:11: note: Reduce using direct vector reduction.
+o2_dgesv.c:79:11: note: ------>vectorizing statement: j_108 = j_147 + 1;
+o2_dgesv.c:79:11: note: ------>vectorizing statement: vectp_matriz_aumentada.11_151 = vectp_matriz_aumentada.11_156 + 16;
+o2_dgesv.c:79:11: note: ------>vectorizing statement: ivtmp_128 = ivtmp_130 + _131;
+o2_dgesv.c:79:11: note: ------>vectorizing statement: if (j_108 < _116)
+o2_dgesv.c:79:11: note: New loop exit condition: if (ivtmp_21 < bnd.7_171)
+o2_dgesv.c:79:11: note: LOOP VECTORIZED
+
+
+Analyzing loop at o2_dgesv.c:55
+o2_dgesv.c:55:3: note: ===== analyze_loop_nest =====
+o2_dgesv.c:55:3: note: === vect_analyze_loop_form ===
+o2_dgesv.c:55:3: note: not vectorized: multiple nested loops.
+o2_dgesv.c:55:3: note: bad loop form.
+
+Analyzing loop at o2_dgesv.c:58
+o2_dgesv.c:58:11: note: ===== analyze_loop_nest =====
+o2_dgesv.c:58:11: note: === vect_analyze_loop_form ===
+o2_dgesv.c:58:11: note: not vectorized: control flow in loop.
+o2_dgesv.c:58:11: note: bad loop form.
+
+Analyzing loop at o2_dgesv.c:64
+o2_dgesv.c:64:20: note: ===== analyze_loop_nest =====
+o2_dgesv.c:64:20: note: === vect_analyze_loop_form ===
+o2_dgesv.c:64:20: note: === get_loop_niters ===
+o2_dgesv.c:64:20: note: Symbolic number of iterations is (unsigned int) _115 + 1
+o2_dgesv.c:64:20: note: === vect_analyze_data_refs ===
+o2_dgesv.c:64:20: note: got vectype for stmt: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+vector(4) double
+o2_dgesv.c:64:20: note: === vect_analyze_scalar_cycles ===
+o2_dgesv.c:64:20: note: Analyze phi: .MEM_134 = PHI <.MEM_33(11), .MEM_101(31)>
+o2_dgesv.c:64:20: note: Analyze phi: k_146 = PHI <0(11), k_102(31)>
+o2_dgesv.c:64:20: note: Access function of PHI: {0, +, 1}_8
+o2_dgesv.c:64:20: note: step: 1,  init: 0
+o2_dgesv.c:64:20: note: Detected induction.
+o2_dgesv.c:64:20: note: === vect_pattern_recog ===
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _49
+o2_dgesv.c:64:20: note: def_stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:64:20: note: === vect_mark_stmts_to_be_vectorized ===
+o2_dgesv.c:64:20: note: init: phi relevant? .MEM_134 = PHI <.MEM_33(11), .MEM_101(31)>
+o2_dgesv.c:64:20: note: init: phi relevant? k_146 = PHI <0(11), k_102(31)>
+o2_dgesv.c:64:20: note: init: stmt relevant? _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: init: stmt relevant? _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: init: stmt relevant? _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: init: stmt relevant? _51 = _48 - _50;
+o2_dgesv.c:64:20: note: init: stmt relevant? *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+o2_dgesv.c:64:20: note: vec_stmt_relevant_p: stmt has vdefs.
+o2_dgesv.c:64:20: note: mark relevant 5, live 0: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+o2_dgesv.c:64:20: note: init: stmt relevant? k_102 = k_146 + 1;
+o2_dgesv.c:64:20: note: init: stmt relevant? if (k_102 <= _116)
+o2_dgesv.c:64:20: note: worklist: examine stmt: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _51
+o2_dgesv.c:64:20: note: def_stmt: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: mark relevant 5, live 0: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: worklist: examine stmt: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _48
+o2_dgesv.c:64:20: note: def_stmt: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: mark relevant 5, live 0: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _50
+o2_dgesv.c:64:20: note: def_stmt: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: mark relevant 5, live 0: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: worklist: examine stmt: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _49
+o2_dgesv.c:64:20: note: def_stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: mark relevant 5, live 0: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand c_100
+o2_dgesv.c:64:20: note: def_stmt: c_100 = _46 / _47;
+o2_dgesv.c:64:20: note: type of def: external
+o2_dgesv.c:64:20: note: def_stmt is out of loop.
+o2_dgesv.c:64:20: note: worklist: examine stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: worklist: examine stmt: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: === vect_analyze_data_ref_dependences ===
+o2_dgesv.c:64:20: note: dependence distance  = 0.
+o2_dgesv.c:64:20: note: dependence distance == 0 between *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] and *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: versioning for alias required: can't determine dependence between *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146] and *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+consider run-time aliasing test between *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146] and *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: === vect_determine_vectorization_factor ===
+o2_dgesv.c:64:20: note: ==> examining phi: .MEM_134 = PHI <.MEM_33(11), .MEM_101(31)>
+o2_dgesv.c:64:20: note: ==> examining phi: k_146 = PHI <0(11), k_102(31)>
+o2_dgesv.c:64:20: note: ==> examining statement: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: nunits = 4
+o2_dgesv.c:64:20: note: ==> examining statement: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: nunits = 4
+o2_dgesv.c:64:20: note: ==> examining statement: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: nunits = 4
+o2_dgesv.c:64:20: note: ==> examining statement: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: nunits = 4
+o2_dgesv.c:64:20: note: ==> examining statement: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+o2_dgesv.c:64:20: note: get vectype for scalar type:  double
+o2_dgesv.c:64:20: note: vectype: vector(4) double
+o2_dgesv.c:64:20: note: nunits = 4
+o2_dgesv.c:64:20: note: ==> examining statement: k_102 = k_146 + 1;
+o2_dgesv.c:64:20: note: skip.
+o2_dgesv.c:64:20: note: ==> examining statement: if (k_102 <= _116)
+o2_dgesv.c:64:20: note: skip.
+o2_dgesv.c:64:20: note: vectorization factor = 4
+o2_dgesv.c:64:20: note: === vect_analyze_slp ===
+o2_dgesv.c:64:20: note: === vect_make_slp_decision ===
+o2_dgesv.c:64:20: note: === vect_analyze_data_refs_alignment ===
+o2_dgesv.c:64:20: note: accesses have the same alignment: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] and *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: recording new base alignment for matriz_aumentada.1_84
+o2_dgesv.c:64:20: note:   alignment:    8
+o2_dgesv.c:64:20: note:   misalignment: 0
+o2_dgesv.c:64:20: note:   based on:     _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:64:20: note: Unknown alignment for access: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:64:20: note: Unknown alignment for access: *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: vect_compute_data_ref_alignment:
+o2_dgesv.c:64:20: note: Unknown alignment for access: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: === vect_prune_runtime_alias_test_list ===
+o2_dgesv.c:64:20: note: improved number of alias checks from 1 to 1
+o2_dgesv.c:64:20: note: === vect_enhance_data_refs_alignment ===
+o2_dgesv.c:64:20: note: Unknown misalignment, naturally aligned
+o2_dgesv.c:64:20: note: Unknown misalignment, naturally aligned
+o2_dgesv.c:64:20: note: Unknown misalignment, naturally aligned
+o2_dgesv.c:64:20: note: vect_can_advance_ivs_p:
+o2_dgesv.c:64:20: note: Analyze phi: .MEM_134 = PHI <.MEM_33(11), .MEM_101(31)>
+o2_dgesv.c:64:20: note: reduc or virtual phi. skip.
+o2_dgesv.c:64:20: note: Analyze phi: k_146 = PHI <0(11), k_102(31)>
+o2_dgesv.c:64:20: note: vect_model_load_cost: aligned.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:64:20: note: Setting misalignment to unknown (-1).
+o2_dgesv.c:64:20: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+o2_dgesv.c:64:20: note: vect_model_store_cost: aligned.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+o2_dgesv.c:64:20: note: vect_model_load_cost: aligned.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:64:20: note: Setting misalignment to unknown (-1).
+o2_dgesv.c:64:20: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+o2_dgesv.c:64:20: note: vect_model_store_cost: aligned.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+o2_dgesv.c:64:20: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:64:20: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+o2_dgesv.c:64:20: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+o2_dgesv.c:64:20: note: vect_model_store_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+o2_dgesv.c:64:20: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:64:20: note: Vectorizing an unaligned access.
+o2_dgesv.c:64:20: note: Vectorizing an unaligned access.
+o2_dgesv.c:64:20: note: Vectorizing an unaligned access.
+o2_dgesv.c:64:20: note: === vect_analyze_loop_operations ===
+o2_dgesv.c:64:20: note: examining phi: .MEM_134 = PHI <.MEM_33(11), .MEM_101(31)>
+o2_dgesv.c:64:20: note: examining phi: k_146 = PHI <0(11), k_102(31)>
+o2_dgesv.c:64:20: note: ==> examining statement: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: num. args = 4 (not unary/binary/ternary op).
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: not ssa-name.
+o2_dgesv.c:64:20: note: use not simple.
+o2_dgesv.c:64:20: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+o2_dgesv.c:64:20: note: ==> examining statement: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: num. args = 4 (not unary/binary/ternary op).
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: not ssa-name.
+o2_dgesv.c:64:20: note: use not simple.
+o2_dgesv.c:64:20: note: vect_model_load_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+o2_dgesv.c:64:20: note: ==> examining statement: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _49
+o2_dgesv.c:64:20: note: def_stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand c_100
+o2_dgesv.c:64:20: note: def_stmt: c_100 = _46 / _47;
+o2_dgesv.c:64:20: note: type of def: external
+o2_dgesv.c:64:20: note: === vectorizable_operation ===
+o2_dgesv.c:64:20: note: vect_model_simple_cost: inside_cost = 20, prologue_cost = 4 .
+o2_dgesv.c:64:20: note: ==> examining statement: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _48
+o2_dgesv.c:64:20: note: def_stmt: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _50
+o2_dgesv.c:64:20: note: def_stmt: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: === vectorizable_operation ===
+o2_dgesv.c:64:20: note: vect_model_simple_cost: inside_cost = 12, prologue_cost = 0 .
+o2_dgesv.c:64:20: note: ==> examining statement: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _51
+o2_dgesv.c:64:20: note: def_stmt: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: vect_model_store_cost: unaligned supported by hardware.
+o2_dgesv.c:64:20: note: vect_model_store_cost: inside_cost = 12, prologue_cost = 0 .
+o2_dgesv.c:64:20: note: ==> examining statement: k_102 = k_146 + 1;
+o2_dgesv.c:64:20: note: irrelevant.
+o2_dgesv.c:64:20: note: ==> examining statement: if (k_102 <= _116)
+o2_dgesv.c:64:20: note: irrelevant.
+o2_dgesv.c:64:20: note: not using a fully-masked loop.
+cost model: Adding cost of checks for loop versioning aliasing.
+o2_dgesv.c:64:20: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+o2_dgesv.c:64:20: note: Cost model analysis: 
+  Vector inside of loop cost: 68
+  Vector prologue cost: 44
+  Vector epilogue cost: 120
+  Scalar iteration cost: 60
+  Scalar outside cost: 4
+  Vector outside cost: 164
+  prologue iterations: 0
+  epilogue iterations: 2
+  Calculated minimum iters for profitability: 3
+o2_dgesv.c:64:20: note:   Runtime profitability threshold = 4
+o2_dgesv.c:64:20: note:   Static estimate profitability threshold = 4
+o2_dgesv.c:64:20: note: epilog loop required
+o2_dgesv.c:64:20: note: vect_can_advance_ivs_p:
+o2_dgesv.c:64:20: note: Analyze phi: .MEM_134 = PHI <.MEM_33(11), .MEM_101(31)>
+o2_dgesv.c:64:20: note: reduc or virtual phi. skip.
+o2_dgesv.c:64:20: note: Analyze phi: k_146 = PHI <0(11), k_102(31)>
+o2_dgesv.c:64:20: note: loop vectorized
+o2_dgesv.c:64:20: note: === vec_transform_loop ===
+o2_dgesv.c:64:20: note: Profitability threshold is 4 loop iterations.
+split exit edge
+create runtime check for data references *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] and *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146]
+o2_dgesv.c:64:20: note: created 1 versioning for alias checks.
+o2_dgesv.c:64:20: note: loop versioned for vectorization because of possible aliasing
+o2_dgesv.c:64:20: note: vect_update_ivs_after_vectorizer: phi: .MEM_134 = PHI <.MEM_101(31), .MEM_33(59)>
+o2_dgesv.c:64:20: note: reduc or virtual phi. skip.
+o2_dgesv.c:64:20: note: vect_update_ivs_after_vectorizer: phi: k_146 = PHI <k_102(31), 0(59)>
+o2_dgesv.c:64:20: note: ------>vectorizing phi: .MEM_134 = PHI <.MEM_101(31), .MEM_33(68)>
+o2_dgesv.c:64:20: note: ------>vectorizing phi: k_146 = PHI <k_102(31), 0(68)>
+o2_dgesv.c:64:20: note: ------>vectorizing statement: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: transform statement.
+o2_dgesv.c:64:20: note: transform load. ncopies = 1
+o2_dgesv.c:64:20: note: create vector_type-pointer variable to type: vector(4) double  vectorizing an array ref: *matriz_aumentada.1_84
+o2_dgesv.c:64:20: note: created vectp_matriz_aumentada.23_227
+o2_dgesv.c:64:20: note: add new stmt: vect__48.24_233 = MEM[(double *)vectp_matriz_aumentada.22_231];
+o2_dgesv.c:64:20: note: ------>vectorizing statement: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: transform statement.
+o2_dgesv.c:64:20: note: transform load. ncopies = 1
+o2_dgesv.c:64:20: note: create vector_type-pointer variable to type: vector(4) double  vectorizing an array ref: *matriz_aumentada.1_84
+o2_dgesv.c:64:20: note: created vectp_matriz_aumentada.26_234
+o2_dgesv.c:64:20: note: add new stmt: vect__49.27_240 = MEM[(double *)vectp_matriz_aumentada.25_238];
+o2_dgesv.c:64:20: note: ------>vectorizing statement: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: transform statement.
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _49
+o2_dgesv.c:64:20: note: def_stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand c_100
+o2_dgesv.c:64:20: note: def_stmt: c_100 = _46 / _47;
+o2_dgesv.c:64:20: note: type of def: external
+o2_dgesv.c:64:20: note: transform binary/unary operation.
+o2_dgesv.c:64:20: note: vect_get_vec_def_for_operand: _49
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _49
+o2_dgesv.c:64:20: note: def_stmt: _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note:   def_stmt =  _49 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: vect_get_vec_def_for_operand: c_100
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand c_100
+o2_dgesv.c:64:20: note: def_stmt: c_100 = _46 / _47;
+o2_dgesv.c:64:20: note: type of def: external
+o2_dgesv.c:64:20: note:   def_stmt =  c_100 = _46 / _47;
+o2_dgesv.c:64:20: note: created new init_stmt: vect_cst__241 = {c_100, c_100, c_100, c_100};
+o2_dgesv.c:64:20: note: add new stmt: vect__50.28_242 = vect__49.27_240 * vect_cst__241;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: transform statement.
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _48
+o2_dgesv.c:64:20: note: def_stmt: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _50
+o2_dgesv.c:64:20: note: def_stmt: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: transform binary/unary operation.
+o2_dgesv.c:64:20: note: vect_get_vec_def_for_operand: _48
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _48
+o2_dgesv.c:64:20: note: def_stmt: _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note:   def_stmt =  _48 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146];
+o2_dgesv.c:64:20: note: vect_get_vec_def_for_operand: _50
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _50
+o2_dgesv.c:64:20: note: def_stmt: _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note:   def_stmt =  _50 = _49 * c_100;
+o2_dgesv.c:64:20: note: add new stmt: vect__51.29_243 = vect__48.24_233 - vect__50.28_242;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_146] = _51;
+o2_dgesv.c:64:20: note: transform statement.
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _51
+o2_dgesv.c:64:20: note: def_stmt: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note: transform store. ncopies = 1
+o2_dgesv.c:64:20: note: vect_get_vec_def_for_operand: _51
+o2_dgesv.c:64:20: note: vect_is_simple_use: operand _51
+o2_dgesv.c:64:20: note: def_stmt: _51 = _48 - _50;
+o2_dgesv.c:64:20: note: type of def: internal
+o2_dgesv.c:64:20: note:   def_stmt =  _51 = _48 - _50;
+o2_dgesv.c:64:20: note: create vector_type-pointer variable to type: vector(4) double  vectorizing an array ref: *matriz_aumentada.1_84
+o2_dgesv.c:64:20: note: created vectp_matriz_aumentada.31_244
+o2_dgesv.c:64:20: note: add new stmt: MEM[(double *)vectp_matriz_aumentada.30_248] = vect__51.29_243;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: k_102 = k_146 + 1;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: vectp_matriz_aumentada.22_232 = vectp_matriz_aumentada.22_231 + 32;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: vectp_matriz_aumentada.25_239 = vectp_matriz_aumentada.25_238 + 32;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: vectp_matriz_aumentada.30_249 = vectp_matriz_aumentada.30_248 + 32;
+o2_dgesv.c:64:20: note: ------>vectorizing statement: if (k_102 <= _116)
+o2_dgesv.c:64:20: note: New loop exit condition: if (ivtmp_252 < bnd.19_223)
+o2_dgesv.c:64:20: note: LOOP VECTORIZED
+
+
+Analyzing loop at o2_dgesv.c:44
+o2_dgesv.c:44:3: note: ===== analyze_loop_nest =====
+o2_dgesv.c:44:3: note: === vect_analyze_loop_form ===
+o2_dgesv.c:44:3: note: === get_loop_niters ===
+o2_dgesv.c:44:3: note: Symbolic number of iterations is (unsigned int) _115
+o2_dgesv.c:44:3: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+
+Analyzing loop at o2_dgesv.c:19
+o2_dgesv.c:19:6: note: ===== analyze_loop_nest =====
+o2_dgesv.c:19:6: note: === vect_analyze_loop_form ===
+o2_dgesv.c:19:6: note: === get_loop_niters ===
+o2_dgesv.c:19:6: note: Symbolic number of iterations is (unsigned int) _138
+o2_dgesv.c:19:6: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+o2_dgesv.c:5:7: note: vectorized 2 loops in function.
+o2_dgesv.c:5:7: note: ===vect_slp_analyze_bb===
+/usr/include/stdlib.h:286:16: note: === vect_analyze_data_refs ===
+/usr/include/stdlib.h:286:16: note: got vectype for stmt: _1 = MEM[(char * *)argv_75(D) + 8B];
+vector(4) long unsigned int
+/usr/include/stdlib.h:286:16: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:13:33: note: === vect_analyze_data_refs ===
+o2_dgesv.c:13:33: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:15:9: note: === vect_analyze_data_refs ===
+o2_dgesv.c:15:9: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:19:6: note: === vect_analyze_data_refs ===
+o2_dgesv.c:19:6: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:19:6: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:40:2: note: === vect_analyze_data_refs ===
+o2_dgesv.c:40:2: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:40:2: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:40:2: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:19:6: note: === vect_analyze_data_refs ===
+o2_dgesv.c:19:6: note: got vectype for stmt: *_27 = _28;
+vector(4) double
+o2_dgesv.c:19:6: note: got vectype for stmt: *_29 = _28;
+vector(4) double
+o2_dgesv.c:19:6: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:19:6: note: not consecutive access *_27 = _28;
+o2_dgesv.c:19:6: note: not consecutive access *_29 = _28;
+o2_dgesv.c:19:6: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:19:6: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:19:6: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:12: note: === vect_analyze_data_refs ===
+o2_dgesv.c:75:12: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:75:12: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:12: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:12: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:49:27: note: === vect_analyze_data_refs ===
+o2_dgesv.c:49:27: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:44:3: note: === vect_analyze_data_refs ===
+o2_dgesv.c:44:3: note: got vectype for stmt: _44 = *_42;
+vector(4) double
+o2_dgesv.c:44:3: note: got vectype for stmt: *matriz_aumentada.1_84[i_152]{lb: 0 sz: _36 * 8}[_116] = _44;
+vector(4) double
+o2_dgesv.c:44:3: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:44:3: note: not consecutive access _44 = *_42;
+o2_dgesv.c:44:3: note: not consecutive access *matriz_aumentada.1_84[i_152]{lb: 0 sz: _36 * 8}[_116] = _44;
+o2_dgesv.c:44:3: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:44:3: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:44:3: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:60:7: note: === vect_analyze_data_refs ===
+o2_dgesv.c:60:7: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:60:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:58:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:58:11: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:58:11: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:62:21: note: === vect_analyze_data_refs ===
+o2_dgesv.c:62:21: note: got vectype for stmt: _46 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[j_148];
+vector(4) double
+o2_dgesv.c:62:21: note: got vectype for stmt: _47 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[j_148];
+vector(4) double
+o2_dgesv.c:62:21: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:62:21: note: not consecutive access _46 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[j_148];
+o2_dgesv.c:62:21: note: not consecutive access _47 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[j_148];
+o2_dgesv.c:62:21: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:62:21: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:62:21: note: === vect_analyze_data_refs ===
+o2_dgesv.c:62:21: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:62:21: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:66:43: note: === vect_analyze_data_refs ===
+o2_dgesv.c:66:43: note: not vectorized: no vectype for stmt: vect__48.24_233 = MEM[(double *)vectp_matriz_aumentada.22_231];
+ scalar_type: vector(4) double
+o2_dgesv.c:66:43: note: not vectorized: no vectype for stmt: vect__49.27_240 = MEM[(double *)vectp_matriz_aumentada.25_238];
+ scalar_type: vector(4) double
+o2_dgesv.c:66:43: note: not vectorized: no vectype for stmt: MEM[(double *)vectp_matriz_aumentada.30_248] = vect__51.29_243;
+ scalar_type: vector(4) double
+o2_dgesv.c:66:43: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:66:43: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:66:43: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:66:43: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:66:43: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:66:43: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:66:43: note: === vect_analyze_data_refs ===
+o2_dgesv.c:66:43: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:66:43: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:20: note: === vect_analyze_data_refs ===
+o2_dgesv.c:64:20: note: got vectype for stmt: _257 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_256];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: _258 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_256];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_256] = _260;
+vector(4) double
+o2_dgesv.c:64:20: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:64:20: note: not consecutive access _257 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_256];
+o2_dgesv.c:64:20: note: not consecutive access *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_256] = _260;
+o2_dgesv.c:64:20: note: not consecutive access _258 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_256];
+o2_dgesv.c:64:20: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:64:20: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:20: note: === vect_analyze_data_refs ===
+o2_dgesv.c:64:20: note: got vectype for stmt: _265 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_264];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: _266 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_264];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_264] = _268;
+vector(4) double
+o2_dgesv.c:64:20: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:64:20: note: not consecutive access _265 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_264];
+o2_dgesv.c:64:20: note: not consecutive access *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_264] = _268;
+o2_dgesv.c:64:20: note: not consecutive access _266 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_264];
+o2_dgesv.c:64:20: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:64:20: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:39: note: === vect_analyze_data_refs ===
+o2_dgesv.c:64:39: note: got vectype for stmt: _216 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_53];
+vector(4) double
+o2_dgesv.c:64:39: note: got vectype for stmt: _217 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_53];
+vector(4) double
+o2_dgesv.c:64:39: note: got vectype for stmt: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_53] = _219;
+vector(4) double
+o2_dgesv.c:64:39: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:64:39: note: not consecutive access _216 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_53];
+o2_dgesv.c:64:39: note: not consecutive access *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_53] = _219;
+o2_dgesv.c:64:39: note: not consecutive access _217 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_53];
+o2_dgesv.c:64:39: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:64:39: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:39: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:20: note: === vect_analyze_data_refs ===
+o2_dgesv.c:64:20: note: got vectype for stmt: _177 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_182];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: _173 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_182];
+vector(4) double
+o2_dgesv.c:64:20: note: got vectype for stmt: *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_182] = _176;
+vector(4) double
+o2_dgesv.c:64:20: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:64:20: note: not consecutive access _177 = *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_182];
+o2_dgesv.c:64:20: note: not consecutive access *matriz_aumentada.1_84[i_35]{lb: 0 sz: _36 * 8}[k_182] = _176;
+o2_dgesv.c:64:20: note: not consecutive access _173 = *matriz_aumentada.1_84[j_148]{lb: 0 sz: _36 * 8}[k_182];
+o2_dgesv.c:64:20: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:64:20: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:20: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:64:20: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:55:3: note: === vect_analyze_data_refs ===
+o2_dgesv.c:55:3: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:55:3: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:55:3: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:58:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:58:11: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:58:11: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:7: note: === vect_analyze_data_refs ===
+o2_dgesv.c:75:7: note: got vectype for stmt: _54 = *matriz_aumentada.1_84[_179]{lb: 0 sz: _36 * 8}[_116];
+vector(4) double
+o2_dgesv.c:75:7: note: got vectype for stmt: _55 = *matriz_aumentada.1_84[_179]{lb: 0 sz: _36 * 8}[_179];
+vector(4) double
+o2_dgesv.c:75:7: note: got vectype for stmt: *x.4_87[_179]{lb: 0 sz: _56 * 8}[col_145] = _57;
+vector(4) double
+o2_dgesv.c:75:7: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:75:7: note: not consecutive access _54 = *matriz_aumentada.1_84[_179]{lb: 0 sz: _36 * 8}[_116];
+o2_dgesv.c:75:7: note: not consecutive access _55 = *matriz_aumentada.1_84[_179]{lb: 0 sz: _36 * 8}[_179];
+o2_dgesv.c:75:7: note: not consecutive access *x.4_87[_179]{lb: 0 sz: _56 * 8}[col_145] = _57;
+o2_dgesv.c:75:7: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:75:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:7: note: === vect_analyze_data_refs ===
+o2_dgesv.c:75:7: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:75:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:7: note: === vect_analyze_data_refs ===
+o2_dgesv.c:75:7: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:75:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:81:19: note: === vect_analyze_data_refs ===
+o2_dgesv.c:81:19: note: not vectorized: no vectype for stmt: vect__58.13_142 = MEM[(double *)vectp_matriz_aumentada.11_156];
+ scalar_type: vector(2) double
+o2_dgesv.c:81:19: note: got vectype for stmt: _125 = MEM[(double *)ivtmp_130];
+vector(4) double
+o2_dgesv.c:81:19: note: got vectype for stmt: _122 = MEM[(double *)ivtmp_124];
+vector(4) double
+o2_dgesv.c:81:19: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:81:19: note: not consecutive access _122 = MEM[(double *)ivtmp_124];
+o2_dgesv.c:81:19: note: not consecutive access _125 = MEM[(double *)ivtmp_130];
+o2_dgesv.c:81:19: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:81:19: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:81:19: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:81:19: note: === vect_analyze_data_refs ===
+o2_dgesv.c:81:19: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:81:19: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:11: note: got vectype for stmt: _147 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_178];
+vector(4) double
+o2_dgesv.c:79:11: note: got vectype for stmt: _222 = *x.4_87[j_178]{lb: 0 sz: _56 * 8}[col_145];
+vector(4) double
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:79:11: note: not consecutive access _147 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_178];
+o2_dgesv.c:79:11: note: not consecutive access _222 = *x.4_87[j_178]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:79:11: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:11: note: got vectype for stmt: _102 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_50];
+vector(4) double
+o2_dgesv.c:79:11: note: got vectype for stmt: _58 = *x.4_87[j_50]{lb: 0 sz: _56 * 8}[col_145];
+vector(4) double
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:79:11: note: not consecutive access _102 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_50];
+o2_dgesv.c:79:11: note: not consecutive access _58 = *x.4_87[j_50]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:79:11: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:11: note: got vectype for stmt: _43 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_107];
+vector(4) double
+o2_dgesv.c:79:11: note: got vectype for stmt: _139 = *x.4_87[j_107]{lb: 0 sz: _56 * 8}[col_145];
+vector(4) double
+o2_dgesv.c:79:11: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:79:11: note: not consecutive access _43 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_107];
+o2_dgesv.c:79:11: note: not consecutive access _139 = *x.4_87[j_107]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:11: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:79:11: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:79:29: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:29: note: got vectype for stmt: _96 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_8];
+vector(4) double
+o2_dgesv.c:79:29: note: got vectype for stmt: _97 = *x.4_87[j_8]{lb: 0 sz: _56 * 8}[col_145];
+vector(4) double
+o2_dgesv.c:79:29: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:79:29: note: not consecutive access _96 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[j_8];
+o2_dgesv.c:79:29: note: not consecutive access _97 = *x.4_87[j_8]{lb: 0 sz: _56 * 8}[col_145];
+o2_dgesv.c:79:29: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:79:29: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:79:29: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:7: note: === vect_analyze_data_refs ===
+o2_dgesv.c:75:7: note: got vectype for stmt: _61 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[_116];
+vector(4) double
+o2_dgesv.c:75:7: note: got vectype for stmt: _63 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[i_150];
+vector(4) double
+o2_dgesv.c:75:7: note: got vectype for stmt: *x.4_87[i_150]{lb: 0 sz: _56 * 8}[col_145] = _64;
+vector(4) double
+o2_dgesv.c:75:7: note: === vect_analyze_data_ref_accesses ===
+o2_dgesv.c:75:7: note: not consecutive access _61 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[_116];
+o2_dgesv.c:75:7: note: not consecutive access _63 = *matriz_aumentada.1_84[i_150]{lb: 0 sz: _36 * 8}[i_150];
+o2_dgesv.c:75:7: note: not consecutive access *x.4_87[i_150]{lb: 0 sz: _56 * 8}[col_145] = _64;
+o2_dgesv.c:75:7: note: not vectorized: no grouped stores in basic block.
+o2_dgesv.c:75:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:75:7: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:79:11: note: === vect_analyze_data_refs ===
+o2_dgesv.c:79:11: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:79:11: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:40:2: note: === vect_analyze_data_refs ===
+o2_dgesv.c:40:2: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:40:2: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:40:2: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:40:2: note: ===vect_slp_analyze_bb===
+o2_dgesv.c:88:9: note: === vect_analyze_data_refs ===
+o2_dgesv.c:88:9: note: not vectorized: not enough data-refs in basic block.
+o2_dgesv.c:93:5: note: === vect_analyze_data_refs ===
+o2_dgesv.c:93:5: note: not vectorized: not enough data-refs in basic block.

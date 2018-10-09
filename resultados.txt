@@ -1,0 +1,450 @@
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 7106.82s
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 7080.72s
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 7117.90s
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663586/slurm_script: línea 14: 11754 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663587/slurm_script: línea 14: 27396 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO1\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663588/slurm_script: línea 14:  1450 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 4323.70s
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 4941.12s
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 4918.77s
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663595/slurm_script: línea 14:  1713 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663596/slurm_script: línea 14:  1925 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO2\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663597/slurm_script: línea 14:  2132 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 4927.61s
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 4975.55s
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 4915.67s
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663604/slurm_script: línea 14: 15475 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663605/slurm_script: línea 14: 15684 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO3\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663606/slurm_script: línea 14: 15895 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 4271.58s
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 4964.38s
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 4912.20s
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663613/slurm_script: línea 14: 21957 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663614/slurm_script: línea 14: 22174 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOfast\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663615/slurm_script: línea 14: 15104 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 4980.92s
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 5024.20s
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 5053.39s
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663622/slurm_script: línea 14: 16577 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663623/slurm_script: línea 14: 25878 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOipo\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663624/slurm_script: línea 14: 16806 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 7243.34s
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 7247.24s
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 6369.10s
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663631/slurm_script: línea 15: 26707 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663632/slurm_script: línea 15: 26915 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO1\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663633/slurm_script: línea 15: 12729 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 6905.12s
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 6770.35s
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 6083.59s
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663640/slurm_script: línea 15: 25257 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663641/slurm_script: línea 15: 25468 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO2\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663642/slurm_script: línea 15: 25677 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 4580.21s
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 5195.50s
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 5174.45s
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663649/slurm_script: línea 15: 32680 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663650/slurm_script: línea 15: 25010 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO3\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663651/slurm_script: línea 15:  4841 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 5079.06s
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 5161.89s
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 4491.35s
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663658/slurm_script: línea 15: 26701 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663659/slurm_script: línea 15: 28967 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOfast\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663660/slurm_script: línea 15: 26915 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=2048\n
+\tREPETICION 1\n
+Time taken by my implementation: 4502.88s
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=2048\n
+\tREPETICION 2\n
+Time taken by my implementation: 5236.89s
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=2048\n
+\tREPETICION 3\n
+Time taken by my implementation: 4538.47s
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=4096\n
+\tREPETICION 1\n
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=4096\n
+\tREPETICION 2\n
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=4096\n
+\tREPETICION 3\n
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=8192\n
+\tREPETICION 1\n
+/SLURM/job1663667/slurm_script: línea 15: 32050 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=8192\n
+\tREPETICION 2\n
+/SLURM/job1663668/slurm_script: línea 15:  1948 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOipo\n
+\tTAMAÑO=8192\n
+\tREPETICION 3\n
+/SLURM/job1663669/slurm_script: línea 15: 10579 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO1
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663709/slurm_script: línea 14:  4820 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO1
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663710/slurm_script: línea 14: 32251 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO1
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663711/slurm_script: línea 14:  2155 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO2
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663712/slurm_script: línea 14: 32449 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO2
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663713/slurm_script: línea 14:  2380 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO2
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663714/slurm_script: línea 14: 32656 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO3
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663715/slurm_script: línea 14:  2632 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO3
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663716/slurm_script: línea 14:   469 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvO3
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663717/slurm_script: línea 14:  2849 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOfast
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663718/slurm_script: línea 14:   673 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOfast
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663719/slurm_script: línea 14:  3065 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOfast
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663720/slurm_script: línea 14:   867 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOipo
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663721/slurm_script: línea 14:  3300 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOipo
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663722/slurm_script: línea 14:  1071 Violación de segmento  ./$1 $2
+PROGRAMA:icc_dgesvOipo
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663723/slurm_script: línea 14:  3617 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO1
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663724/slurm_script: línea 15:  1272 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO1
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663725/slurm_script: línea 15:  3846 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO1
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663726/slurm_script: línea 15:  1481 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO2
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663727/slurm_script: línea 15:  4074 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO2
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663728/slurm_script: línea 15:  1727 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO2
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663729/slurm_script: línea 15:  4286 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO3
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663730/slurm_script: línea 15:  1924 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO3
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663731/slurm_script: línea 15:  4481 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvO3
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663732/slurm_script: línea 15:  2120 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOfast
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663733/slurm_script: línea 15:  4696 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOfast
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663734/slurm_script: línea 15:  2336 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOfast
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663735/slurm_script: línea 15:  4904 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOipo
+	TAMAÑO=8192
+	REPETICION 1
+/SLURM/job1663736/slurm_script: línea 15:  2587 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOipo
+	TAMAÑO=8192
+	REPETICION 2
+/SLURM/job1663737/slurm_script: línea 15:  5112 Violación de segmento  ./$1 $2
+PROGRAMA:dgesvOipo
+	TAMAÑO=8192
+	REPETICION 3
+/SLURM/job1663738/slurm_script: línea 15: 10789 Violación de segmento  ./$1 $2

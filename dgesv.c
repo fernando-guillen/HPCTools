@@ -112,8 +112,8 @@ int my_dgesv(int n, double *a, double *b) {
 
 
         // Usar eliminacion Gaussiana
-	tStart = clock();      
-        my_dgesv(size, a, b,);
+	clock_t tStart = clock();      
+        my_dgesv(size, a, b);
         printf("Time taken by my implementation: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
 
 
