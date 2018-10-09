@@ -1,15 +1,26 @@
-all: dgesv
+all: dgesvO0 dgesvO1 dgesvO2 dgesvO3 dgesvOfast dgesvOipo
 
-dgesv: dgesv.c
-	icc -lmkl -lmkl_core -lmkl_intel_lp64 -lmkl_sequential -o dgesv dgesv.c
+dgesvO0: dgesv.c
+	icc -O0 -o icc_dgesvO0 dgesv.c
 
-run: 
-	echo "Small test"
-	./dgesv 2048
-	echo "Medium test"
-	./dgesv 4096
-	echo "Large test"
-	./dgesv 8192
+dgesvO1: dgesv.c
+	icc -O1 -o icc_dgesvO1 dgesv.c
+
+dgesvO2: dgesv.c
+	icc -O2 -xHost -o icc_dgesvO2 dgesv.c
+
+dgesvO3: dgesv.c
+	icc -O3 -xHost -o icc_dgesvO3 dgesv.c
+
+dgesvOfast: dgesv.c
+	icc -Ofast -xHost -o icc_dgesvOfast dgesv.c
+
+dgesvOipo: dgesv.c
+	icc -Ofast -xHost -ipo -o icc_dgesvOipo dgesv.c
+
+dgesvPGO: dgesv.c
+	icc -Ofast -xHost -ipo  -prof-gen -o icc_dgesvPGO dgesv.c
 
 clean: 
-	rm dgesv
+	rm icc_dgesvO0 icc_dgesvO1 icc_dgesvO2 icc_dgesvO3 icc_dgesvOfast icc_dgesvOipo icc_dgesvPGO
+

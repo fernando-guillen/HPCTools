@@ -1,4 +1,4 @@
-all: dgesv_0 dgesv_1 dgesv_2 dgesv_3 dgesv_fast dgesv_ipo
+all: dgesv_0 dgesv_1 dgesv_2 dgesv_3 dgesv_fast dgesv_ipo dgesv_PGO
 
 CC = gcc
 
@@ -20,5 +20,8 @@ dgesv_fast: dgesv.c
 dgesv_ipo: dgesv.c
 	${CC} -Ofast -march=native -fipa-pta -o dgesvOipo -fopenmp dgesv.c
 
+dgesv_PGO: dgesv.c
+	${CC} -Ofast -march=native -fipa-pta -fprofile-generate -o dgesvPGO -fopenmp dgesv.c
+
 clean:
-	 rm -f dgesvO0 dgesvO1 dgesvO2 dgesvO3 dgesvOfast dgesvOipo
+	 rm -f dgesvO0 dgesvO1 dgesvO2 dgesvO3 dgesvOfast dgesvOipo dgesvPGO

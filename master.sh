@@ -32,23 +32,33 @@ LARGE=8192
 #done
 
 #PGO
-sbatch run_icc.sh icc_dgesvPGO $SMALL 1
-sbatch run_icc.sh icc_dgesvPGO $SMALL 2
-sbatch run_icc.sh icc_dgesvPGO $SMALL 3
-sbatch run_icc.sh icc_dgesvPGO $MED 1
-sbatch run_icc.sh icc_dgesvPGO $MED 2
-sbatch run_icc.sh icc_dgesvPGO $MED 3
-sbatch run_icc.sh icc_dgesvPGO $LARGE 1
-sbatch run_icc.sh icc_dgesvPGO $LARGE 2
-sbatch run_icc.sh icc_dgesvPGO $LARGE 3
+#sbatch run_icc.sh icc_dgesvPGO $SMALL 1
+#sbatch run_icc.sh icc_dgesvPGO $SMALL 2
+#sbatch run_icc.sh icc_dgesvPGO $SMALL 3
+#sbatch run_icc.sh icc_dgesvPGO $MED 1
+#sbatch run_icc.sh icc_dgesvPGO $MED 2
+#sbatch run_icc.sh icc_dgesvPGO $MED 3
+#sbatch run_icc.sh icc_dgesvPGO $LARGE 1
+#sbatch run_icc.sh icc_dgesvPGO $LARGE 2
+#sbatch run_icc.sh icc_dgesvPGO $LARGE 3
 
 
-sbatch run_gcc.sh dgesvPGO $SMALL 1
-sbatch run_gcc.sh dgesvPGO $SMALL 2
-sbatch run_gcc.sh dgesvPGO $SMALL 3
-sbatch run_gcc.sh dgesvPGO $MED 1
-sbatch run_gcc.sh dgesvPGO $MED 2
-sbatch run_gcc.sh dgesvPGO $MED 3
-sbatch run_gcc.sh dgesvPGO $LARGE 1
-sbatch run_gcc.sh dgesvPGO $LARGE 2
-sbatch run_gcc.sh dgesvPGO $LARGE 3
+#sbatch run_gcc.sh dgesvPGO $SMALL 1
+#sbatch run_gcc.sh dgesvPGO $SMALL 2
+#sbatch run_gcc.sh dgesvPGO $SMALL 3
+#sbatch run_gcc.sh dgesvPGO $MED 1
+#sbatch run_gcc.sh dgesvPGO $MED 2
+#sbatch run_gcc.sh dgesvPGO $MED 3
+#sbatch run_gcc.sh dgesvPGO $LARGE 1
+#sbatch run_gcc.sh dgesvPGO $LARGE 2
+#sbatch run_gcc.sh dgesvPGO $LARGE 3
+
+sbatch run_gcc.sh dgesvOcustom $SMALL 1
+sbatch run_gcc.sh dgesvOcustom $SMALL 1
+sbatch run_gcc.sh dgesvOcustom $SMALL 1
+sbatch run_gcc.sh dgesvOcustom $MED 1
+sbatch run_gcc.sh dgesvOcustom $MED 1
+sbatch run_gcc.sh dgesvOcustom $MED 1
+sbatch run_gcc.sh dgesvOcustom $LARGE 1
+sbatch run_gcc.sh dgesvOcustom $LARGE 2
+sbatch run_gcc.sh dgesvOcustom $LARGE 3
