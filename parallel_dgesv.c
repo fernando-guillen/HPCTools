@@ -58,31 +58,28 @@ for (i = 0; i < size; i++)
 	// Para cada columna de b
 	for (col = 0; col < size; col++)
 	{
-#pragma omp parallel shared(x,a,b,size,matriz_aumentada,col)
-{
 		//Copiar el contenido de a en la matriz aumentada	
-#pragma omp for collapse(2) schedule(dynamic) private(i,j) 
 		for (i = 0; i < size; i++)
    			for (j = 0; j < size; j++)
         			matriz_aumentada[i][j]=a[i*size+j];
             	//Para cada fila i añadir el valor de la columna B a la matriz aumentada
-#pragma omp for schedule(dynamic) private(i,j,c,k) firstprivate(matriz_aumentada,sum)
 		for (i = 0; i < size; i++)
 			matriz_aumentada[i][size]=b[i*size +col];
-}
+
 		for(j=0; j<size; j++) // loop for the generation of upper triangular matrix
     		{
-        		for(i=0; i<size ; i++)
+#pragma omp parallel shared(size,j,matriz_aumentada)
+{
+#pragma omp for private(i,k,c) 
+        		for(i=j+1; i<size ; i++)
         		{
-				if(i>j)
-				{
                 			c=matriz_aumentada[i][j]/matriz_aumentada[j][j];
 		                	for(k=0; k<=size; k++)
                 			{
                 				matriz_aumentada[i][k]=matriz_aumentada[i][k]-c*matriz_aumentada[j][k];
                 			}
-				}
         		}
+}
     		}
 
     		x[size-1][col]=matriz_aumentada[size-1][size]/matriz_aumentada[size-1][size-1];
